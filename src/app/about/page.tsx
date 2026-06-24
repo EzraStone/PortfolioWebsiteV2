@@ -1,6 +1,6 @@
 "use client";
 
-import TransitionLink from "@/components/ui/transition-link";
+import Image from "next/image";
 
 const themeRed = 'oklch(0.577 0.245 27.325)';
 const buttonStyle: React.CSSProperties = {
@@ -43,18 +43,12 @@ export default function AboutPage() {
                 justifyContent: 'center',
                 marginBottom: '32px',
             }}>
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&h=200&facepad=2&q=80"
                     alt="Profile"
-                    style={{
-                        width: '120px',
-                        height: '120px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        background: '#000',
-                        boxShadow: '0 0 0 0 #000',
-                        marginBottom: '16px',
-                    }}
+                    width={120}
+                    height={120}
+                    className="rounded-full object-cover bg-black mb-4"
                 />
                 <h1 style={{
                     fontSize: '2.8rem',
@@ -102,7 +96,7 @@ export default function AboutPage() {
                             lineHeight: '1.7',
                             marginBottom: '0',
                         }}>
-                            I'm a Computer Science major passionate about cybersecurity, artificial intelligence, and innovative software development. I combine technical expertise with a creative mindset to design effective, forward-thinking solutions to complex problems
+                            I&apos;m a Computer Science major passionate about cybersecurity, artificial intelligence, and innovative software development. I combine technical expertise with a creative mindset to design effective, forward-thinking solutions to complex problems
                         </p>
                         <div style={{
                             borderBottom: `2px solid ${themeRed}`,

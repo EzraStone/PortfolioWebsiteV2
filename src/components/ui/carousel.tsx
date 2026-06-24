@@ -59,7 +59,9 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         yRef.current = 0;
     };
 
-    const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const imageLoaded = (
+        event: React.SyntheticEvent<HTMLImageElement | HTMLVideoElement>
+    ) => {
         event.currentTarget.style.opacity = "1";
     };
 

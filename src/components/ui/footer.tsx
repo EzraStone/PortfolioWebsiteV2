@@ -3,7 +3,6 @@ import {
     IconBrandGithub,
     IconBrandLinkedin,
     IconFileText,
-    IconHeart,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { NavbarLogo } from "./resizable-navbar";

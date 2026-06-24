@@ -97,10 +97,11 @@ export default function ProjectCard({ project, projectId }: ProjectCardProps) {
                                 <source src={project.images[0].src.startsWith('/') ? project.images[0].src : `/${project.images[0].src}`} type="video/mp4" />
                             </video>
                         ) : (
-                            <img
+                            <Image
                                 src={project.images[0].src}
                                 alt={project.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                                fill
+                                className="absolute inset-0 object-cover transition-all duration-700 ease-out group-hover:scale-105"
                             />
                         )
                     ) : (

@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import {
     Building,
     Calendar,
@@ -11,56 +11,8 @@ import {
     Github,
     MapPin,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
-
-// Helper function to parse markdown-like formatting
-const parseFormattedText = (text: string) => {
-    const parts = [];
-    let currentIndex = 0;
-
-    // Match **bold** and [text](url) patterns
-    const regex = /(\*\*(.*?)\*\*)|(\[(.*?)\]\((.*?)\))/g;
-    let match;
-
-    while ((match = regex.exec(text)) !== null) {
-        // Add text before the match
-        if (match.index > currentIndex) {
-            parts.push({
-                type: "text",
-                content: text.slice(currentIndex, match.index),
-            });
-        }
-
-        if (match[1]) {
-            // Bold text: **text**
-            parts.push({
-                type: "bold",
-                content: match[2],
-            });
-        } else if (match[3]) {
-            // Link: [text](url)
-            parts.push({
-                type: "link",
-                content: match[4],
-                url: match[5],
-            });
-        }
-
-        currentIndex = match.index + match[0].length;
-    }
-
-    // Add remaining text
-    if (currentIndex < text.length) {
-        parts.push({
-            type: "text",
-            content: text.slice(currentIndex),
-        });
-    }
-
-    return parts;
-};
 
 export interface TimelineExperience {
     id: string;
@@ -97,11 +49,10 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({
     experience,
-    index,
 }: ExperienceCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    useInView(ref, { once: true, margin: "-50px" });
 
     const renderIcon = (iconType: "github" | "external") => {
         return iconType === "github" ? (

@@ -1,6 +1,5 @@
 "use client";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";

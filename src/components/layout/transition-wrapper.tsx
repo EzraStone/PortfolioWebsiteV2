@@ -11,7 +11,6 @@ export default function TransitionWrapper({
     children,
 }: TransitionWrapperProps) {
     const pathname = usePathname();
-    const isLandingPage = pathname === "/";
 
     // Reset fade classes when route changes
     useEffect(() => {
