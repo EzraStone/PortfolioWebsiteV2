@@ -13,8 +13,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd portfolio-v4
+git clone <repo-url>
+cd 
 ```
 
 2. Install dependencies:
