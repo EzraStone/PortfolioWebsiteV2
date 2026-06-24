@@ -1,0 +1,30 @@
+import React from "react";
+
+// Global state for project panel
+let isProjectPanelOpen = false;
+const listeners: ((isOpen: boolean) => void)[] = [];
+
+export const setProjectPanelOpen = (isOpen: boolean) => {
+    // Only run on client side
+    if (typeof window === "undefined") return;
+    
+    isProjectPanelOpen = isOpen;
+    listeners.forEach((listener) => listener(isOpen));
+};
+
+export const useProjectPanelState = () => {
+    const [isOpen, setIsOpen] = React.useState(isProjectPanelOpen);
+
+    React.useEffect(() => {
+        const listener = (isOpen: boolean) => setIsOpen(isOpen);
+        listeners.push(listener);
+        return () => {
+            const index = listeners.indexOf(listener);
+            if (index > -1) {
+                listeners.splice(index, 1);
+            }
+        };
+    }, []);
+
+    return isOpen;
+};
