@@ -2,16 +2,6 @@
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This template provides a professional foundation for showcasing your skills, projects, and experience.
 
-## Features
-
-- 🎨 **Modern Design**: Clean, professional design with smooth animations
-- 📱 **Responsive Layout**: Optimized for all device sizes
-- ⚡ **Fast Performance**: Built with Next.js for optimal performance
-- 🎭 **Smooth Animations**: Framer Motion animations throughout
-- 🎨 **Customizable Colors**: Easy color scheme customization
-- 📝 **Content Management**: Simple content updates through constants files
-- 🔍 **SEO Ready**: Built-in SEO optimization
-
 ## Getting Started
 
 ### Prerequisites
@@ -23,8 +13,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd portfolio-v4
+git clone <repo-url>
+cd 
 ```
 
 2. Install dependencies:
@@ -134,44 +124,4 @@ src/
 │   └── workshops.tsx     # Workshops data
 └── lib/                  # Utility functions
 ```
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-
-Build the project:
-```bash
-npm run build
-```
-
-The built files will be in the `.next` folder, ready for deployment to any static hosting service.
-
-## Customization Tips
-
-1. **Start with content**: Update the text content first before styling
-2. **Test responsiveness**: Ensure your site looks good on all devices
-3. **Optimize images**: Use appropriate image formats and sizes
-4. **Update meta tags**: Don't forget to update title, description, and other meta information
-5. **Test performance**: Use Lighthouse to ensure good performance scores
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Support
-
-If you need help customizing this template, please open an issue in the repository.
-
----
-
-**Note**: This template has been designed to be easily customizable while maintaining professional quality. All personal information has been replaced with placeholder content that you can easily update with your own information.
+*Note**: This template has been designed to be easily customizable while maintaining professional quality. All personal information has been replaced with placeholder content that you can easily update with your own information.
