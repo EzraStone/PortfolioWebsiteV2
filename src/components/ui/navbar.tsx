@@ -23,7 +23,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export function NavbarHome() {
-    const navItems = [];
+    const navItems: { name: string; link: string }[] = [];
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
