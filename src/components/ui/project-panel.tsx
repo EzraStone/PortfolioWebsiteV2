@@ -285,16 +285,30 @@ export default function ProjectPanel({ projects }: ProjectPanelProps) {
                             </div>
 
                             <div className="prose prose-sm max-w-none text-sm md:text-base mb-8">
-                                <div
-                                    style={{
-                                        color: selectedProject.colors.panelText,
-                                    }}
-                                >
-                                    {parseHighlight(
-                                        selectedProject.longDescription,
-                                        selectedProject.colors.accent
-                                    )}
-                                </div>
+                                {selectedProject.longDescription ? (
+                                    <div
+                                        style={{
+                                            color:
+                                                selectedProject.colors
+                                                    .panelText,
+                                        }}
+                                    >
+                                        {parseHighlight(
+                                            selectedProject.longDescription,
+                                            selectedProject.colors.accent
+                                        )}
+                                    </div>
+                                ) : (
+                                    <div
+                                        className="text-sm md:text-base leading-relaxed"
+                                        style={{
+                                            color: `${selectedProject.colors.panelText}CC`,
+                                        }}
+                                    >
+                                        More detailed project information is
+                                        unavailable at the moment.
+                                    </div>
+                                )}
                             </div>
 
                             <div className="mb-8">

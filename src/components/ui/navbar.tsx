@@ -23,16 +23,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export function NavbarHome() {
-    const navItems = [
-        {
-            name: "About Me",
-            link: "/about",
-        },
-        {
-            name: "Projects",
-            link: "/projects",
-        },
-    ];
+    const navItems = [];
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
